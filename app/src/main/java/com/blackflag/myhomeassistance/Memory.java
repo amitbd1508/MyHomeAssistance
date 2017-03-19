@@ -7,6 +7,8 @@ import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.blackflag.myhomeassistance.listener.IDataReciver;
+
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 
@@ -16,21 +18,26 @@ import java.net.URISyntaxException;
 /**
  * Created by BlackFlag on 6/27/2016.
  */
-public class Memory {
+public class Memory  {
 
 
     public static String ip1="0";
     public static String ip2="102";
+    static IDataReciver iDataReciver;
 
 
 
-
+    public static void init(IDataReciver iData)
+    {
+        iDataReciver=iData;
+    }
     //methos
 
     public  static  boolean isConnected=false;
     public static WebSocketClient mWebSocketClient;
     public static void connectWebsoket(String ip1,String ip2) throws Exception
     {
+
 
         Log.d("%%%%%%%%%%","connectedWebsoket");
         URI uri;
@@ -52,6 +59,7 @@ public class Memory {
 
             @Override
             public void onMessage(String message) {
+                iDataReciver.reciveData(message);
 
             }
 

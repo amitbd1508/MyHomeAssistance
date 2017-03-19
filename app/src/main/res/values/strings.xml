@@ -29,4 +29,42 @@
 
 
     <string name="action_settings">Settings</string>
+
+    <string name="btSpeak">Speak</string>
+    04
+    <string name="menu_settings">Settings</string>
+    05
+    <string name="title_activity_voice_recognition">Voice Recognition</string>
+    06
+    <string name="tvTextMatches">Text Matches</string>
+    07
+    <string name="sNoOfMatches">No of Matches</string>
+    08
+    <string name="etSearchHint">Speech hint here</string>
+    09
+    <string-array name="saNoOfMatches">
+        10
+        <item>1</item>
+        11
+        <item>2</item>
+        12
+        <item>3</item>
+        13
+        <item>4</item>
+        14
+        <item>5</item>
+        15
+        <item>6</item>
+        16
+        <item>7</item>
+        17
+        <item>8</item>
+        18
+        <item>9</item>
+        19
+        <item>10</item>
+        20
+    </string-array>
+
+
 </resources>
